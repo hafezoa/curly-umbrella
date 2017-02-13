@@ -32,7 +32,7 @@ body {
 // for tablets
 @media only screen and (min-width: $--md-width) {
   @for $i from 1 through 12 {
-    $width = ($i/12) * 100;
+    $width : ($i/12) * 100;
     .col-md-#{$i} {
       max-width: $width;
       flex-basis: $width;
@@ -40,7 +40,7 @@ body {
   }
 
   @for $i from 1 through 12 {
-    $margin-left = ($i/12) * 100;
+    $margin-left : ($i/12) * 100;
     .col-md-offset-#{$i} {
       margin-left: $margin-left;
     }
@@ -50,7 +50,7 @@ body {
 // for desktop
 @media only screen and (min-width: $--lg-width) {
   @for $i from 1 through 12 {
-    $width = ($i/12) * 100;
+    $width : ($i/12) * 100;
     .col-lg-#{$i} {
       max-width: $width;
       flex-basis: $width;
@@ -58,7 +58,7 @@ body {
   }
 
   @for $i from 1 through 12 {
-    $margin-left = ($i/12) * 100;
+    $margin-left : ($i/12) * 100;
     .col-lg-offset-#{$i} {
       margin-left: $margin-left;
     }
