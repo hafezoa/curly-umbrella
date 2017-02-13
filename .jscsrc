@@ -1,0 +1,7 @@
+{
+    "preset": "airbnb",
+    "requireTrailingComma" : false,
+    "validateLineBreaks" : null,
+    "maximumLineLength" : null,
+    "requirePaddingNewLinesBeforeLineComments": { "allExcept": "firstAfterCurly" }
+}

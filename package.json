@@ -1,0 +1,48 @@
+{
+  "name": "curly-umbrella",
+  "version": "1.0.0",
+  "description": "Todo app for github issues",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm-run-all --parallel style bundle lint:watch jscs watchify",
+    "lite": "npm lite-server",
+    "watchify": "watchify src/js/main.js -o dist/js/index.js",
+    "bundle": "browserify src/js/main.js -o dist/js/index.js -t [ babelify --presets [ es2015 ] ] -w",
+    "style": "node-sass --output-style -o dist/styles src/styles -w",
+    "jscs": "jscs src/js -w",
+    "lint": "node_modules/.bin/esw src/js/main.js",
+    "lint:watch": "npm run lint -- --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hafezoa/curly-umbrella.git"
+  },
+  "keywords": [
+    "todo",
+    "github",
+    "issues"
+  ],
+  "author": "Omar Hafez (hafezoa@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hafezoa/curly-umbrella/issues"
+  },
+  "homepage": "https://github.com/hafezoa/curly-umbrella#readme",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babelify": "^7.3.0",
+    "cli-color": "^1.1.0",
+    "eslint": "^3.15.0",
+    "eslint-config-google": "^0.7.1",
+    "lite-server": "^2.2.2",
+    "node-sass": "^4.5.0",
+    "npm-run-all": "^4.0.1",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "browserify": "^14.0.0",
+    "whatwg-fetch": "^2.0.2"
+  }
+}
