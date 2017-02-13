@@ -1,0 +1,66 @@
+$--md-width: 48rem;
+$--lg-width: 64rem;
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+// row is always the parent element
+.row {
+  display: flex; // direction row is the default
+  flex: 0 1 auto; // grow / shrink / basis | 0=don't grow | 1=distribute-evenly | auto=takes full width
+  flex-wrap: wrap; // no-wrap is the default
+}
+
+// For mobile phones
+[class="col-"] {
+  flex-basis: 100%; // equivalent to width but for flex items
+  max-height: 100%;
+}
+
+// for tablets
+@media only screen and (min-width: $--md-width) {
+  @for $i from 1 through 12 {
+    $width = ($i/12) * 100;
+    .col-md-#{$i} {
+      max-width: $width;
+      flex-basis: $width;
+    }
+  }
+
+  @for $i from 1 through 12 {
+    $margin-left = ($i/12) * 100;
+    .col-md-offset-#{$i} {
+      margin-left: $margin-left;
+    }
+  }
+}
+
+// for desktop
+@media only screen and (min-width: $--lg-width) {
+  @for $i from 1 through 12 {
+    $width = ($i/12) * 100;
+    .col-lg-#{$i} {
+      max-width: $width;
+      flex-basis: $width;
+    }
+  }
+
+  @for $i from 1 through 12 {
+    $margin-left = ($i/12) * 100;
+    .col-lg-offset-#{$i} {
+      margin-left: $margin-left;
+    }
+  }
+}
