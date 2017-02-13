@@ -4,14 +4,10 @@
   "description": "Todo app for github issues",
   "main": "index.html",
   "scripts": {
-    "start": "npm-run-all --parallel style bundle lint:watch jscs watchify",
-    "lite": "npm lite-server",
+    "start": "npm-run-all --parallel style bundle watchify",
     "watchify": "watchify src/js/main.js -o dist/js/index.js",
     "bundle": "browserify src/js/main.js -o dist/js/index.js -t [ babelify --presets [ es2015 ] ] -w",
     "style": "node-sass --output-style -o dist/styles src/styles -w",
-    "jscs": "jscs src/js -w",
-    "lint": "node_modules/.bin/esw src/js/main.js",
-    "lint:watch": "npm run lint -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
