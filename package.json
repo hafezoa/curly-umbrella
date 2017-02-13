@@ -4,7 +4,8 @@
   "description": "Todo app for github issues",
   "main": "index.html",
   "scripts": {
-    "start": "npm-run-all --parallel style bundle watchify",
+    "start": "npm-run-all --parallel style bundle watchify dev",
+    "dev":"lite-server",
     "watchify": "watchify src/js/main.js -o dist/js/index.js",
     "bundle": "browserify src/js/main.js -o dist/js/index.js -t [ babelify --presets [ es2015 ] ] -w",
     "style": "node-sass --output-style -o dist/styles src/styles -w",
