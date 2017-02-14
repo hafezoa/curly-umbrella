@@ -1,1 +1,0 @@
-const goodbye = 'yoyoyo';

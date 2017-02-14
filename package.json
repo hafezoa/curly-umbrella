@@ -6,8 +6,8 @@
   "scripts": {
     "start": "npm-run-all --parallel style bundle watchify dev",
     "dev":"lite-server",
-    "watchify": "watchify src/js/main.js -o dist/js/index.js",
-    "bundle": "browserify src/js/main.js -o dist/js/index.js -t [ babelify --presets [ es2015 ] ] -w",
+    "watchify": "watchify src/js/app.js -o dist/js/main.js",
+    "bundle": "browserify src/js/app.js -o dist/js/main.js -t [ babelify --presets [ es2015 ] ] -w",
     "style": "node-sass src/styles -o dist/css -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
