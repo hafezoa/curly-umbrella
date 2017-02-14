@@ -1,6 +1,11 @@
-.hello {
+@import '_lightsabers.scss';
+@import '_theforce.scss';
 
-  .goodbye {
-    background-color: rebeccapurple;
-  }
+html, body {
+    background-color: $--bg-color;
+    font-family: courier-prime, monospace;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
 }
